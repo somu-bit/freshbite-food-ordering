@@ -364,3 +364,89 @@ body {
 .text-center {
     text-align: center;
 }
+/* ==========================================
+   MOBILE & TABLET RESPONSIVE STYLES
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* Header & Mobile Dropdown */
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-brown);
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: auto;
+        padding: 80px 20px 60px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Category Cards & Filters */
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .category-card {
+        padding: 15px 10px;
+    }
+
+    .category-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .menu-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .dietary-filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .food-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-modal {
+        max-width: 100%;
+    }
+}
